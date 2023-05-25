@@ -13,7 +13,7 @@ const credentials = {
 
 // Initialize the Africa's Talking SDK
 const africastalking = AfricasTalking(credentials);
-const airtime = africastalking.Airtime;
+const airtime = africastalking.AIRTIME;
 
 // Set up middleware
 app.use(bodyParser.urlencoded({ extended: false }));
