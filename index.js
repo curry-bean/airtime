@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 // Set up the /send-airtime route
 app.post('/send-airtime', (req, res) => {
   const phoneNumber = req.body['phone-number'];
-  const amount = 4;
+  const amount = 20;
   const currencyCode = 'KES';
 
   const options = {
