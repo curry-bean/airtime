@@ -7,8 +7,8 @@ const port = 4000;
 
 // Replace with your own API key and username
 const credentials = {
-  apiKey: '97092cda822d5ca895f4ae0b38cde71060628cd8248fd5ef995ca41761b5a98b',
-  username: 'sandbox'
+  apiKey: '196b681be1821e84b700a0b90033c096c6bae1592dd27370d6225e0a243866c1',
+  username: 'teamofsix'
 };
 
 // Initialize the Africa's Talking SDK
@@ -21,12 +21,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Set up the home page
 app.get('/', (req, res) => {
   res.send(`
-    <form method="POST" action="/send-airtime">
-      <label for="phone-number">Enter phone number:</label>
-      <input type="text" id="phone-number" name="phone-number" required>
-      <br>
-      <button type="submit">Send airtime</button>
-    </form>
+  <form method="POST" action="/send-airtime" style="background-color: #f2f2f2; padding: 20px;">
+  <label for="phone-number" style="color: #333;">Enter phone number:</label>
+  <input type="text" id="phone-number" name="phone-number" required style="background-color: #fff; border: 1px solid #ccc; padding: 5px; margin: 5px 0;">
+  <br>
+  <button type="submit" style="background-color: #4CAF50; color: #fff; border: none; padding: 10px 20px; margin-top: 10px; cursor: pointer;">Send airtime</button>
+</form>
   `);
 });
 
