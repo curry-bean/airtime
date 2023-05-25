@@ -3,16 +3,17 @@ const AfricasTalking = require('africastalking');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 4000;
+const port = 8080;
 
 // Replace with your own API key and username
 const credentials = {
-  apiKey: '196b681be1821e84b700a0b90033c096c6bae1592dd27370d6225e0a243866c1',
+  apiKey: 'b454272b3985c778116f94395bb16a13d47a7768555ec24ef665ff5ce8167816',
   username: 'teamofsix'
 };
 
 // Initialize the Africa's Talking SDK
 const africastalking = AfricasTalking(credentials);
+
 const airtime = africastalking.AIRTIME;
 
 // Set up middleware
@@ -33,7 +34,7 @@ app.get('/', (req, res) => {
 // Set up the /send-airtime route
 app.post('/send-airtime', (req, res) => {
   const phoneNumber = req.body['phone-number'];
-  const amount = 20;
+  const amount = 5;
   const currencyCode = 'KES';
 
   const options = {
